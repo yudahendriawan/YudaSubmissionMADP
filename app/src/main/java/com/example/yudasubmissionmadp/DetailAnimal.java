@@ -9,11 +9,13 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
+import com.uncopt.android.widget.text.justify.JustifiedTextView;
 
 public class DetailAnimal extends AppCompatActivity {
     Animal animal;
     ImageView imgPhoto;
-    TextView deskripsi,name,scientificName,habitat;
+    TextView name,scientificName,habitat;
+    JustifiedTextView deskripsi;
     private String titleToolbar = "Detail Hewan";
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">YudaSubmissionMADP</string>
+    <string name="custom_app_name">Extinction</string>
     <string name="animals_name">Badak Bercula Satu</string>
     <string name="habitat">Lombok, Indonesia</string>
     <string name="scientific_name">Oryza sativa</string>
