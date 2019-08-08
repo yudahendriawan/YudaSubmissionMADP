@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="@dimen/activity_vertical_margin"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@+id/img_item_photo"
@@ -84,6 +84,7 @@
                 android:text="@string/detail"
                 android:textSize="14sp"
                 android:textStyle="bold"
+                android:layout_marginBottom="5dp"
                 android:layout_marginRight="@dimen/activity_vertical_margin"/>
 
         </LinearLayout>

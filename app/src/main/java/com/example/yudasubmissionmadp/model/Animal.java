@@ -9,8 +9,17 @@ public class Animal implements Parcelable {
     private String habitat;
     private String scientificName;
     private String description;
+    private String photo;
 
     public Animal() {
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public String getName() {
@@ -45,11 +54,16 @@ public class Animal implements Parcelable {
         this.description = description;
     }
 
-    public static Creator<Animal> getCREATOR() {
+    /*public static Creator<Animal> getCREATOR() {
         return CREATOR;
-    }
+    }*/
 
     protected Animal(Parcel in) {
+        name = in.readString();
+        scientificName = in.readString();
+        habitat = in.readString();
+        description = in.readString();
+        photo = in.readString();
     }
 
     public static final Creator<Animal> CREATOR = new Creator<Animal>() {
@@ -71,5 +85,20 @@ public class Animal implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(scientificName);
+        dest.writeString(habitat);
+        dest.writeString(description);
+        dest.writeString(photo);
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", habitat='" + habitat + '\'' +
+                ", scientificName='" + scientificName + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
