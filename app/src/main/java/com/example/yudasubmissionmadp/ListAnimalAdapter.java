@@ -50,6 +50,11 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
         return position;
     }
 
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
     /**
      * Class view holder Animal
      */
@@ -84,7 +89,7 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
                 public void onClick(View v) {
                     Intent intent = new Intent(v.getContext(), DetailAnimal.class);
                     intent.putExtra(Key.INTENT_DATA, animal);
-                    context.startActivity(intent);
+                    v.getContext().startActivity(intent);
 
                 }
             });

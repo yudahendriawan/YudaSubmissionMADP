@@ -1,6 +1,8 @@
 package com.example.yudasubmissionmadp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -42,24 +44,87 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Membaca file menu dan menambahkan isinya ke action bar jika ada.
+//        getMenuInflater().inflate(R.menu.menu, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        setMode(item.getItemId());
+//        return true;
+//    }
+//
+//
+//    public void setMode(int selectedMode) {
+//        switch (selectedMode) {
+//            case R.id.about:
+//                Intent intent = new Intent(this, AboutMe.class);
+//                startActivity(intent);
+//                break;
+//        }
+//    }
+
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Membaca file menu dan menambahkan isinya ke action bar jika ada.
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle presses on the action bar items
-        switch (item.getItemId()) {
+        setMode(item.getItemId());
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void setMode(int selectedMode) {
+
+        switch (selectedMode){
             case R.id.about:
                 Intent intent = new Intent(this, AboutMe.class);
                 startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-
+                break;
+            case R.id.exit:
+                exit();
         }
+
+//        if(selectedMode == R.id.about){
+//                Intent intent = new Intent(this, AboutMe.class);
+//                startActivity(intent);
+//        }
     }
+
+    public void exit() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                this);
+
+        // set title
+        alertDialogBuilder.setTitle(null);
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage("Apakah anda ingin keluar?")
+                .setCancelable(false)
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // if this button is clicked, close
+                        // current activity
+                        MainActivity.this.finish();
+                    }
+                })
+                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // if this button is clicked, just close
+                        // the dialog box and do nothing
+                        dialog.cancel();
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+    }
+
 }
