@@ -31,41 +31,77 @@
                     tools:src="@color/colorPrimaryLight" />
 
                 <TextView
-                    android:id="@+id/tv_item_name"
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_toEndOf="@+id/img_item_photo"
+                    android:layout_toRightOf="@+id/img_item_photo"
+                    android:text="Nama"
+                    android:textColor="@color/colorPrimaryLight"/>
+
+                <TextView
+                    android:id="@+id/tv_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_below="@id/name"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:layout_marginBottom="8dp"
                     android:layout_toEndOf="@+id/img_item_photo"
                     android:layout_toRightOf="@+id/img_item_photo"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
                     tools:text="@string/animals_name" />
+
+                <TextView
+                    android:id="@+id/latin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_below="@id/tv_item_name"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_toEndOf="@+id/img_item_photo"
+                    android:layout_toRightOf="@+id/img_item_photo"
+                    android:text="Nama Latin"
+                    android:textColor="@color/colorPrimaryLight"/>
 
                 <TextView
                     android:id="@+id/tv_item_scientificname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_item_name"
+                    android:layout_below="@+id/latin"
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:layout_toEndOf="@id/img_item_photo"
                     android:layout_toRightOf="@+id/img_item_photo"
                     android:maxLines="1"
+                    android:layout_marginBottom="8dp"
                     android:scrollbars="horizontal"
-                    android:textSize="12sp"
                     android:textStyle="italic"
                     tools:text="@string/scientific_name" />
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_toEndOf="@+id/img_item_photo"
+                    android:layout_below="@id/tv_item_scientificname"
+                    android:layout_toRightOf="@+id/img_item_photo"
+                    android:text="Asal/Habitat"
+                    android:textColor="@color/colorPrimaryLight"/>
 
                 <TextView
                     android:id="@+id/tv_item_habitat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_item_scientificname"
+                    android:layout_below="@id/from"
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginTop="4dp"
+
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:layout_toEndOf="@id/img_item_photo"
                     tools:text="@string/habitat" />
@@ -74,7 +110,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/relative"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
@@ -83,7 +118,8 @@
                     android:layout_height="wrap_content"
                     android:text="Deskripsi"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryLight"/>
 
                 <com.uncopt.android.widget.text.justify.JustifiedTextView
                     android:id="@+id/tv_description"

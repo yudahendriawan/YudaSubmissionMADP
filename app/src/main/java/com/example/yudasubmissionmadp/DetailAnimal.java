@@ -40,7 +40,7 @@ public class DetailAnimal extends AppCompatActivity {
 
         Glide.with(this)
                 .load(animal.getPhoto())
-                .apply(new RequestOptions().override(350,550))
+                .apply(new RequestOptions().override(150,220))
                 .into(imgPhoto);
 
     }
