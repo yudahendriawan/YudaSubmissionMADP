@@ -82,7 +82,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/detail"
-                android:textSize="12sp" />
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/activity_vertical_margin"/>
 
         </LinearLayout>
     </RelativeLayout>
