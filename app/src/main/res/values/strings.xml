@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">YudaSubmissionMADP</string>
+    <string name="animals_name">Badak Bercula Satu</string>
+    <string name="habitat">Lombok, Indonesia</string>
+    <string name="scientific_name">Oryza sativa</string>
+    <string name="detail">Lihat Detail</string>
+</resources>
