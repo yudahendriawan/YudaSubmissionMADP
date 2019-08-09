@@ -18,7 +18,10 @@ public class AnimalsData {
                     ,"Rhinocerotidae"
                     ,"Rhinoceros"
                     ,"Rhinoceros sondaicus"
-                    ,"Kritis (Critical)"},
+                    ,"Kritis (Critical)"
+                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
+            },
             {"Harimau Sumatera"
                     ,"Pulau Sumatera"
                     ,"Harimau sumatera (Panthera tigris sumatrae) merupakan salah satu dari tiga subspesies harimau yang ada di Indonesia. Dua subspesies lain yaitu harimau bali (Panthera tigris balica) dan harimau jawa (Panthera tigris sondaica) telah dinyatakan punah, meskipun ada beberapa pihak yang masih meyakini bahwa harimau jawa masih ada. Harimau sumatera adalah subspesies terakhir yang masih dapat bertahan dan mewakili subspesies harimau di Indonesia. Oleh karena itu,harimau sumatera bukan hanya merupakan komponen penting dari keanekaragaman hayati Indonesia tetapi juga merupakan salah satu predator puncak (top predator) yang masih tersisa. Bila jenis ini punah maka tidak hanya merupakan suatu kehilangan secara ekologis tetapi juga memalukan dari segi politis bagi pemerintah Indonesia dan masyarakat Indonesia pada umumnya."
@@ -30,7 +33,9 @@ public class AnimalsData {
                     ,"Felidae"
                     ,"Phantera"
                     ,"Phantera tigris"
-                    ,"Kritis (Critical)"},
+                    ,"Kritis (Critical)"
+                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"},
             {"Komodo"
                     ,"Pulau Komodo"
                     ,"Komodo, atau juga disebut biawak komodo (Varanus komodoensis), adalah spesies biawak besar yang terdapat di Pulau Komodo, Rinca, Flores, Gili Motang, dan Gili Dasami di Provinsi Nusa Tenggara Timur, Indonesia. Biawak ini oleh penduduk asli pulau Komodo juga disebut dengan nama setempat ora.\n" +
@@ -47,6 +52,24 @@ public class AnimalsData {
                     ,"Varanus"
                     ,"Varanus komodoensis"
                     ,"Rentan (Vulnerable)"
+                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Status_iucn_VU_icon.svg/1024px-Status_iucn_VU_icon.svg.png"
+            },
+            {"Jalak Bali"
+                    ,"Pulau Bali"
+                    ,"Di habitat alaminya jalak bali termasuk jenis burung yang suka terbang secara berombongan, pada musim kawin yang berlangsung antara bulan September-Desember mereka terbang secara berpasangan sambil mencari makan. Satwa ini membuat sarang di dalam lubang- lubang pohon pada ketinggian 2,5-7 m dari tanah. Jalak bali mempunyai aktivitas harian yang sama, yaitu setelah matahari terbit yaitu pada pukul 05.00-05.30 WITA mereka mulai terbang secara berkelompok menuju tempat makan/minum, dan mereka kembali menuju tempat tidur sebelum matahari terbenam yaitu pada pukul 14.30 WITA. Kegiatan harian ini akan berhenti sama sekali pada pukul 18.45 WITA. Radius pergerakan hariannya bervariasi dari 3-10 km tergantung pada keadaan lingkungannya.[6] Meskipun di alam jalak bali merupakan burung yang paling liar namun aktivitas yang dilakukannya selalu diiringi komunikasi suara antar pasangan- pasangan yang ada. Jalak bali merupakan burung yang menyukai kebersihan. Satwa ini suka bermain air untuk membersihkan badannya. Setelah itu, mereka mengeringkan tubuhnya dengan cara mengigit-gigit bulunya satu persatu. Pengeringan bulu ini dilakukan dengan berjemur sinar matahari dan bertengger di ranting-ranting pohon. Bulu-bulunya akan mengering dan kembali mengkilap bahkan semakin bercahaya"
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bali_Myna_in_Bali_Barat_National_Park.jpg/230px-Bali_Myna_in_Bali_Barat_National_Park.jpg"
+                    ,"Animalia"
+                    ,"Chordata"
+                    ,"Aves"
+                    ,"Passeriformes"
+                    ,"Sturnidae"
+                    ,"Leucopsar"
+                    ,"Leucopsar rothschildi"
+                    ,"Kritis (Critical)"
+                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
+
             }
             /**
              * 1 Nama,
@@ -60,6 +83,8 @@ public class AnimalsData {
              * 9 family
              * 10 genus
              * 11 spesies
+             * 12 urlHabitat
+             * 13 urlStatus
              *
             */
     };
@@ -82,6 +107,9 @@ public class AnimalsData {
             animal.setGenus(animalData[9]);
             animal.setSpesies(animalData[10]);
             animal.setStatus(animalData[11]);
+            animal.setUrlHabitat(animalData[12]);
+            animal.setUrlStatus(animalData[13]);
+
             list.add(animal);
         }
         return list;

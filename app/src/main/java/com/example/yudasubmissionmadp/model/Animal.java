@@ -18,6 +18,10 @@ public class Animal implements Parcelable {
     private String genus;
     private String spesies;
     private String status;
+    private String urlHabitat;
+    private String urlStatus;
+
+
 
 
 
@@ -128,6 +132,22 @@ public class Animal implements Parcelable {
         this.status = status;
     }
 
+    public String getUrlHabitat() {
+        return urlHabitat;
+    }
+
+    public void setUrlHabitat(String urlHabitat) {
+        this.urlHabitat = urlHabitat;
+    }
+
+    public String getUrlStatus() {
+        return urlStatus;
+    }
+
+    public void setUrlStatus(String urlStatus) {
+        this.urlStatus = urlStatus;
+    }
+
     /*public static Creator<Animal> getCREATOR() {
         return CREATOR;
     }*/
@@ -165,6 +185,8 @@ public class Animal implements Parcelable {
         genus = in.readString();
         spesies = in.readString();
         status = in.readString();
+        urlHabitat = in.readString();
+        urlStatus = in.readString();
     }
 
     @Override
@@ -182,5 +204,7 @@ public class Animal implements Parcelable {
         dest.writeString(genus);
         dest.writeString(spesies);
         dest.writeString(status);
+        dest.writeString(urlHabitat);
+        dest.writeString(urlStatus);
     }
 }

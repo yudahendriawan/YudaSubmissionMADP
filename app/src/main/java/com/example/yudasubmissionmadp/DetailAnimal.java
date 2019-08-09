@@ -1,7 +1,9 @@
 package com.example.yudasubmissionmadp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +18,7 @@ public class DetailAnimal extends AppCompatActivity {
     Animal animal;
     ImageView imgPhoto;
     TextView name,scientificName,habitat,kingdom,filum,kelas,ordo,family,genus,spesies,statusKonservasi;
+    ImageView imgStatus,imgHabitat;
     JustifiedTextView deskripsi;
     private String titleToolbar = "Detail Hewan";
     @Override
@@ -31,7 +34,7 @@ public class DetailAnimal extends AppCompatActivity {
         deskripsi = findViewById(R.id.tv_description);
         name = findViewById(R.id.tv_item_name);
       //  scientificName = findViewById(R.id.tv_item_scientificname);
-       // habitat = findViewById(R.id.tv_item_habitat);
+        habitat = findViewById(R.id.tv_habitat);
         imgPhoto = findViewById(R.id.img_item_photo);
         kingdom = findViewById(R.id.tv_kingdom);
         filum = findViewById(R.id.tv_filum);
@@ -40,15 +43,17 @@ public class DetailAnimal extends AppCompatActivity {
         family = findViewById(R.id.tv_family);
         genus = findViewById(R.id.tv_genus);
         spesies = findViewById(R.id.tv_spesies);
+        imgStatus = findViewById(R.id.img_status);
+        imgHabitat = findViewById(R.id.img_habitat);
 
-      //  statusKonservasi = findViewById(R.id.tv_status_conservation);
+        statusKonservasi = findViewById(R.id.tv_status);
 
         animal = getIntent().getExtras().getParcelable(Key.INTENT_DATA);
 
         name.setText(animal.getName());
         deskripsi.setText(animal.getDescription());
        // scientificName.setText(animal.getScientificName());
-       // habitat.setText(animal.getHabitat());
+        habitat.setText(animal.getHabitat());
 
         kingdom.setText(animal.getKingdom());
         filum.setText(animal.getFilum());
@@ -58,17 +63,44 @@ public class DetailAnimal extends AppCompatActivity {
         genus.setText(animal.getGenus());
         spesies.setText(animal.getSpesies());
 
-       // statusKonservasi.setText(animal.getStatus());
+        statusKonservasi.setText(animal.getStatus());
 
         Glide.with(this)
                 .load(animal.getPhoto())
                 .apply(new RequestOptions().override(1000,1000))
                 .into(imgPhoto);
 
-    }
+        Glide.with(this)
+                .load(animal.getUrlStatus())
+                .apply(new RequestOptions().override(500,500))
+                .into(imgStatus);
 
-    public void onBackPressed(){
+        Glide.with(this)
+                .load(animal.getUrlHabitat())
+                .apply(new RequestOptions().override(500,500))
+                .into(imgHabitat);
+
+        imgHabitat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ViewImage.class);
+                intent.putExtra(Key.INTENT_IMAGE, animal);
+                startActivity(intent);
+            }
+        });
+
+        imgPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ViewImage.class);
+                intent.putExtra(Key.INTENT_DATA, animal);
+                startActivity(intent);
+            }
+        });
 
     }
+//    public void onBackPressed(){
+//
+//    }
 
 }

@@ -22,13 +22,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/img_item_photo"
-                    android:layout_width="150dp"
-                    android:layout_height="220dp"
-                    android:layout_marginBottom="4dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@color/colorPrimaryLight" />
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="4dp"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+                    <ImageView
+                        android:id="@+id/img_item_photo"
+                        android:layout_width="150dp"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        tools:src="@color/colorPrimaryLight" />
+                </android.support.v7.widget.CardView>
+
 
                 <!--<TextView-->
                 <!--android:id="@+id/name"-->
@@ -49,8 +57,7 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:layout_marginBottom="8dp"
-                    android:layout_toEndOf="@+id/img_item_photo"
-                    android:layout_toRightOf="@+id/img_item_photo"
+                    android:layout_toEndOf="@+id/card_view_img"
                     android:scrollbars="horizontal"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -62,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_item_name"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:text="Kingdom"
                     android:textColor="@color/colorPrimaryLight" />
 
@@ -81,7 +88,7 @@
                     android:layout_below="@id/kingdom"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
                     android:layout_marginTop="5dp"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:text="Filum"
                     android:textColor="@color/colorPrimaryLight" />
 
@@ -101,7 +108,7 @@
                     android:layout_below="@id/filum"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
                     android:layout_marginTop="5dp"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:text="Kelas"
                     android:textColor="@color/colorPrimaryLight" />
 
@@ -121,7 +128,7 @@
                     android:layout_below="@id/kelas"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
                     android:layout_marginTop="5dp"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:text="Ordo"
                     android:textColor="@color/colorPrimaryLight" />
 
@@ -141,7 +148,7 @@
                     android:layout_below="@id/ordo"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
                     android:layout_marginTop="5dp"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:text="Family"
                     android:textColor="@color/colorPrimaryLight" />
 
@@ -161,7 +168,7 @@
                     android:layout_below="@id/family"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
                     android:layout_marginTop="5dp"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:text="Genus"
                     android:textColor="@color/colorPrimaryLight" />
 
@@ -181,7 +188,7 @@
                     android:layout_below="@id/genus"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
                     android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:text="Spesies"
 
                     android:textColor="@color/colorPrimaryLight" />
@@ -193,7 +200,7 @@
 
                     android:layout_below="@id/spesies"
                     android:layout_marginStart="@dimen/activity_vertical_margin"
-                    android:layout_toEndOf="@id/img_item_photo"
+                    android:layout_toEndOf="@id/card_view_img"
                     android:textStyle="italic"
 
                     tools:text="Animalia" />
@@ -280,6 +287,85 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="50dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="@dimen/activity_vertical_margin"
+                            android:layout_marginEnd="@dimen/activity_vertical_margin"
+                            card_view:cardCornerRadius="4dp">
+
+                            <ImageView
+                                android:id="@+id/img_habitat"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:background="@color/color_white"/>
+
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/tv_habitat"
+                            android:paddingTop="7dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="TN Way Kambas"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="50dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="@dimen/activity_vertical_margin"
+                            android:layout_marginEnd="@dimen/activity_vertical_margin"
+                            card_view:cardCornerRadius="25dp">
+
+                            <ImageView
+                                android:id="@+id/img_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_white"/>
+
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:paddingTop="7dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Kritis"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
 
                 <!--<TextView-->
                 <!--android:layout_width="match_parent"-->
