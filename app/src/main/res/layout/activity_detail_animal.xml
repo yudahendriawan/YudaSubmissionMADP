@@ -30,81 +30,249 @@
                     android:scaleType="centerCrop"
                     tools:src="@color/colorPrimaryLight" />
 
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:layout_toEndOf="@+id/img_item_photo"
-                    android:layout_toRightOf="@+id/img_item_photo"
-                    android:text="Nama"
-                    android:textColor="@color/colorPrimaryLight"/>
+                <!--<TextView-->
+                <!--android:id="@+id/name"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+                <!--android:layout_toEndOf="@+id/img_item_photo"-->
+                <!--android:layout_toRightOf="@+id/img_item_photo"-->
+                <!--android:text="Nama"-->
+                <!--android:textColor="@color/colorPrimaryLight"/>-->
 
                 <TextView
                     android:id="@+id/tv_item_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_below="@id/name"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:layout_marginBottom="8dp"
                     android:layout_toEndOf="@+id/img_item_photo"
                     android:layout_toRightOf="@+id/img_item_photo"
+                    android:scrollbars="horizontal"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     tools:text="@string/animals_name" />
 
                 <TextView
-                    android:id="@+id/latin"
+                    android:id="@+id/kingdom"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_item_name"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_toEndOf="@id/img_item_photo"
+                    android:text="Kingdom"
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/tv_kingdom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_below="@id/tv_item_name"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:layout_toEndOf="@+id/img_item_photo"
-                    android:layout_toRightOf="@+id/img_item_photo"
-                    android:text="Nama Latin"
-                    android:textColor="@color/colorPrimaryLight"/>
+                    android:layout_toEndOf="@id/kingdom"
+                    tools:text="Animalia" />
 
                 <TextView
-                    android:id="@+id/tv_item_scientificname"
+                    android:id="@+id/filum"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kingdom"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/img_item_photo"
+                    android:text="Filum"
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/tv_filum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/latin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_below="@id/tv_kingdom"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/filum"
+                    tools:text="Animalia" />
+
+                <TextView
+                    android:id="@+id/kelas"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/filum"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/img_item_photo"
-                    android:layout_toRightOf="@+id/img_item_photo"
-                    android:maxLines="1"
-                    android:layout_marginBottom="8dp"
-                    android:scrollbars="horizontal"
+                    android:text="Kelas"
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/tv_kelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_filum"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/kelas"
+                    tools:text="Animalia" />
+
+                <TextView
+                    android:id="@+id/ordo"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kelas"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/img_item_photo"
+                    android:text="Ordo"
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/tv_ordo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_kelas"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/ordo"
+                    tools:text="Animalia" />
+
+                <TextView
+                    android:id="@+id/family"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ordo"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/img_item_photo"
+                    android:text="Family"
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/tv_family"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_ordo"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/family"
+                    tools:text="Animalia" />
+
+                <TextView
+                    android:id="@+id/genus"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/family"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/img_item_photo"
+                    android:text="Genus"
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/tv_genus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_family"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/genus"
+                    tools:text="Animalia" />
+
+                <TextView
+                    android:id="@+id/spesies"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genus"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/img_item_photo"
+                    android:text="Spesies"
+
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/tv_spesies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/spesies"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:layout_toEndOf="@id/img_item_photo"
                     android:textStyle="italic"
-                    tools:text="@string/scientific_name" />
 
-                <TextView
-                    android:id="@+id/from"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:layout_toEndOf="@+id/img_item_photo"
-                    android:layout_below="@id/tv_item_scientificname"
-                    android:layout_toRightOf="@+id/img_item_photo"
-                    android:text="Asal/Habitat"
-                    android:textColor="@color/colorPrimaryLight"/>
+                    tools:text="Animalia" />
 
-                <TextView
-                    android:id="@+id/tv_item_habitat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/from"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                <!--<TextView-->
+                <!--android:id="@+id/latin"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+                <!--android:layout_below="@id/tv_item_name"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+                <!--android:layout_toEndOf="@+id/img_item_photo"-->
+                <!--android:layout_toRightOf="@+id/img_item_photo"-->
+                <!--android:text="Nama Latin"-->
+                <!--android:textColor="@color/colorPrimaryLight"/>-->
 
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:layout_toEndOf="@id/img_item_photo"
-                    tools:text="@string/habitat" />
+                <!--<TextView-->
+                <!--android:id="@+id/tv_item_scientificname"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/latin"-->
+                <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+                <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+                <!--android:layout_toEndOf="@id/img_item_photo"-->
+                <!--android:layout_toRightOf="@+id/img_item_photo"-->
+                <!--android:maxLines="1"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:scrollbars="horizontal"-->
+                <!--android:textStyle="italic"-->
+                <!--tools:text="@string/scientific_name" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/from"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+                <!--android:layout_toEndOf="@+id/img_item_photo"-->
+                <!--android:layout_below="@id/tv_item_scientificname"-->
+                <!--android:layout_toRightOf="@+id/img_item_photo"-->
+                <!--android:text="Asal/Habitat"-->
+                <!--android:textColor="@color/colorPrimaryLight"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_item_habitat"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/from"-->
+                <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+
+                <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+                <!--android:layout_toEndOf="@id/img_item_photo"-->
+                <!--tools:text="@string/habitat" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/status"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+                <!--android:layout_marginTop="13dp"-->
+                <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+                <!--android:layout_toEndOf="@+id/img_item_photo"-->
+                <!--android:layout_below="@id/tv_item_habitat"-->
+                <!--android:layout_toRightOf="@+id/img_item_photo"-->
+                <!--android:text="Status Konservasi"-->
+                <!--android:textColor="@color/colorPrimaryLight"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_status_conservation"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/status"-->
+                <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+                <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+                <!--android:layout_toEndOf="@id/img_item_photo"-->
+                <!--tools:text="Kritis" />-->
+
             </RelativeLayout>
 
             <LinearLayout
@@ -113,20 +281,125 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Kingdom"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_kingdom"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Animalia"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="Filum"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_filum"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Chordata"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="Kelas"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_kelas"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Mamalia"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="Ordo"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_ordo"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Karnivora"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="Family"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_family"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Felidae"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="Genus"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_genus"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Phantera"-->
+                <!--android:textStyle="italic"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="Spesies"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_spesies"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--tools:text="Phantera tigris"-->
+                <!--android:textStyle="italic"-->
+                <!--/>-->
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Deskripsi"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorPrimaryLight"/>
+                    android:textColor="@color/colorPrimaryLight" />
 
                 <com.uncopt.android.widget.text.justify.JustifiedTextView
                     android:id="@+id/tv_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:paddingTop="5dp"
                     android:scrollbars="vertical"
                     android:textSize="14sp"
                     tools:text="@string/tools_deskripi_animal" />

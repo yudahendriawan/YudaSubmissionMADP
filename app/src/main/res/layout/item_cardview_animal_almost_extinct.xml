@@ -35,29 +35,30 @@
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@+id/img_item_photo"
             android:layout_toRightOf="@+id/img_item_photo"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textStyle="bold"
+            android:textColor="@color/colorPrimaryLight"
             tools:text="@string/animals_name"/>
 
-        <TextView
-            android:id="@+id/tv_item_scientificname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_item_name"
-            android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:layout_marginRight="@dimen/activity_vertical_margin"
-            android:layout_toEndOf="@id/img_item_photo"
-            android:layout_toRightOf="@+id/img_item_photo"
-            tools:text="@string/scientific_name"
-            android:textStyle="italic"
-            />
+        <!--<TextView-->
+            <!--android:id="@+id/tv_item_scientificname"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_item_name"-->
+            <!--android:layout_marginLeft="@dimen/activity_vertical_margin"-->
+            <!--android:layout_marginRight="@dimen/activity_vertical_margin"-->
+            <!--android:layout_toEndOf="@id/img_item_photo"-->
+            <!--android:layout_toRightOf="@+id/img_item_photo"-->
+            <!--tools:text="@string/scientific_name"-->
+            <!--android:textStyle="italic"-->
+            <!--/>-->
 
         <TextView
             android:id="@+id/tv_item_habitat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:layout_below="@id/tv_item_scientificname"
+            android:layout_below="@id/tv_item_name"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginRight="@dimen/activity_vertical_margin"
             tools:text="@string/habitat"
@@ -71,7 +72,6 @@
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@id/img_item_photo"
-            android:layout_toRightOf="@id/img_item_photo"
             android:orientation="horizontal">
 
             <Button
@@ -86,7 +86,7 @@
                 android:layout_marginTop="10dp"
                 android:textSize="14sp"
                 android:layout_marginBottom="5dp"
-                android:layout_marginRight="@dimen/activity_vertical_margin"/>
+                android:layout_marginEnd="@dimen/activity_vertical_margin"/>
 
         </LinearLayout>
     </RelativeLayout>

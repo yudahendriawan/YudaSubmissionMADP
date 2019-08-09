@@ -2,6 +2,7 @@ package com.example.yudasubmissionmadp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.example.yudasubmissionmadp.data.AnimalsData;
 import com.example.yudasubmissionmadp.model.Animal;
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private String titleToolbar = "Hewan Dilindungi";
     private Toolbar toolbar;
 
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(titleToolbar);
         rvAnimals = findViewById(R.id.rv_animals);
         rvAnimals.setHasFixedSize(true);
+
+        //to set full screen
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         list.addAll(AnimalsData.getListData());
 
@@ -125,6 +134,28 @@ public class MainActivity extends AppCompatActivity {
 
         // show it
         alertDialog.show();
+    }
+
+    /**
+     * To exit with twice clicked back button
+     */
+    @Override
+    public void onBackPressed(){
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 
 }

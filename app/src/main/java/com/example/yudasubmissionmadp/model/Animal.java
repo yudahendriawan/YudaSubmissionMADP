@@ -10,6 +10,16 @@ public class Animal implements Parcelable {
     private String scientificName;
     private String description;
     private String photo;
+    private String kingdom;
+    private String filum;
+    private String kelas;
+    private String ordo;
+    private String family;
+    private String genus;
+    private String spesies;
+    private String status;
+
+
 
     public Animal() {
     }
@@ -54,17 +64,75 @@ public class Animal implements Parcelable {
         this.description = description;
     }
 
+    public String getKingdom() {
+        return kingdom;
+    }
+
+    public void setKingdom(String kingdom) {
+        this.kingdom = kingdom;
+    }
+
+    public String getFilum() {
+        return filum;
+    }
+
+    public void setFilum(String filum) {
+        this.filum = filum;
+    }
+
+    public String getKelas() {
+        return kelas;
+    }
+
+    public void setKelas(String kelas) {
+        this.kelas = kelas;
+    }
+
+    public String getOrdo() {
+        return ordo;
+    }
+
+    public void setOrdo(String ordo) {
+        this.ordo = ordo;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    public String getGenus() {
+        return genus;
+    }
+
+    public void setGenus(String genus) {
+        this.genus = genus;
+    }
+
+    public String getSpesies() {
+        return spesies;
+    }
+
+    public void setSpesies(String spesies) {
+        this.spesies = spesies;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     /*public static Creator<Animal> getCREATOR() {
         return CREATOR;
     }*/
 
-    protected Animal(Parcel in) {
-        name = in.readString();
-        scientificName = in.readString();
-        habitat = in.readString();
-        description = in.readString();
-        photo = in.readString();
-    }
+
 
     public static final Creator<Animal> CREATOR = new Creator<Animal>() {
         @Override
@@ -83,6 +151,22 @@ public class Animal implements Parcelable {
         return 0;
     }
 
+    protected Animal(Parcel in) {
+        name = in.readString();
+        scientificName = in.readString();
+        habitat = in.readString();
+        description = in.readString();
+        photo = in.readString();
+        kingdom = in.readString();
+        filum = in.readString();
+        kelas = in.readString();
+        ordo = in.readString();
+        family = in.readString();
+        genus = in.readString();
+        spesies = in.readString();
+        status = in.readString();
+    }
+
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
@@ -90,15 +174,13 @@ public class Animal implements Parcelable {
         dest.writeString(habitat);
         dest.writeString(description);
         dest.writeString(photo);
-    }
-
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "name='" + name + '\'' +
-                ", habitat='" + habitat + '\'' +
-                ", scientificName='" + scientificName + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        dest.writeString(kingdom);
+        dest.writeString(filum);
+        dest.writeString(kelas);
+        dest.writeString(ordo);
+        dest.writeString(family);
+        dest.writeString(genus);
+        dest.writeString(spesies);
+        dest.writeString(status);
     }
 }

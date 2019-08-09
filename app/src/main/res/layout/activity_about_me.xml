@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,31 +7,46 @@
     tools:context=".AboutMe">
 
     <LinearLayout
+        android:background="@drawable/space_bg_png_rsz"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="140dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/photo_me"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/yuda_png_cropped"
-           />
+            android:layout_gravity="center"
+            android:src="@drawable/yuda_png_cropped" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:paddingTop="8dp"
+            android:textColor="@color/color_white"
             android:text="@string/my_name"
-            android:textStyle="bold"
-            android:gravity="center"/>
+
+
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:text="@string/my_email"/>
+            android:layout_gravity="center"
+            android:textColor="@color/color_white"
+            android:text="@string/my_email"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/quotes"
+            android:textColor="@color/color_white"
+            android:textStyle="italic" />
 
     </LinearLayout>
 

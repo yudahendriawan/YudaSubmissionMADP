@@ -61,7 +61,7 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
 
     public class ListAnimalViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
-        TextView name,habitat,scientificName;
+        TextView name,habitat;
         Button detail;
 
         public ListAnimalViewHolder(@NonNull View itemView) {
@@ -69,7 +69,6 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             name = itemView.findViewById(R.id.tv_item_name);
             habitat = itemView.findViewById(R.id.tv_item_habitat);
-            scientificName = itemView.findViewById(R.id.tv_item_scientificname);
             detail = itemView.findViewById(R.id.btn_detail);
         }
 
@@ -77,11 +76,10 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
 
             name.setText(animal.getName());
             habitat.setText(animal.getHabitat());
-            scientificName.setText(animal.getScientificName());
 
             Glide.with(itemView.getContext())
                     .load(animal.getPhoto())
-                    .apply(new RequestOptions().override(350,550))
+                    .apply(new RequestOptions().override(1000,1000))
                     .into(imgPhoto);
 
             detail.setOnClickListener(new View.OnClickListener() {
