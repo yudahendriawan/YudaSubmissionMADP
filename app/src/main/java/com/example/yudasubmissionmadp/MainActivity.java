@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.yudasubmissionmadp.data.AnimalsData;
 import com.example.yudasubmissionmadp.model.Animal;
+import com.example.yudasubmissionmadp.utils.Key;
 
 import java.util.ArrayList;
 
@@ -23,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView rvAnimals;
     private ArrayList<Animal> list = new ArrayList<>();
-    private String titleToolbar = "Hewan Dilindungi";
-    private Toolbar toolbar;
 
     boolean doubleBackToExitPressedOnce = false;
 
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle(titleToolbar);
+        getSupportActionBar().setTitle(Key.TITLE_MAIN);
         rvAnimals = findViewById(R.id.rv_animals);
         rvAnimals.setHasFixedSize(true);
 

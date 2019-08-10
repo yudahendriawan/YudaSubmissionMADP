@@ -8,8 +8,8 @@ import android.widget.ImageView;
 
 
 public class AboutMe extends AppCompatActivity {
-    private String titleToolbar = "About Me";
-  //  CircleImageView photo;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,16 +20,6 @@ public class AboutMe extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
       //  photo = findViewById(R.id.photo_me);
         getSupportActionBar().hide();
-//        getSupportActionBar().setTitle(titleToolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-//        Glide.with(this)
-//                .load(getDrawable(R.drawable.aku))
-//                .into(photo);
     }
-//
-//    public void onBackPressed(){
-//
-//    }
 
 }

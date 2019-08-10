@@ -19,7 +19,7 @@ public class AnimalsData {
                     ,"Rhinoceros"
                     ,"Rhinoceros sondaicus"
                     ,"Kritis (Critical)"
-                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"http://3.bp.blogspot.com/-gThIohoIsAE/UHZQBpwNalI/AAAAAAAACRw/GXkDNllPk6s/s640/Ujung-Kulon-National-Park-map-1600.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
             },
             {"Harimau Sumatera"
@@ -34,7 +34,7 @@ public class AnimalsData {
                     ,"Phantera"
                     ,"Phantera tigris"
                     ,"Kritis (Critical)"
-                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"https://nationdeveloper.files.wordpress.com/2011/05/sumatera.png"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"},
             {"Komodo"
                     ,"Pulau Komodo"
@@ -52,7 +52,7 @@ public class AnimalsData {
                     ,"Varanus"
                     ,"Varanus komodoensis"
                     ,"Rentan (Vulnerable)"
-                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"http://www.pulaukomodo.com/uploaded/content/Taman-Nasional-Komodo.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Status_iucn_VU_icon.svg/1024px-Status_iucn_VU_icon.svg.png"
             },
             {"Jalak Bali"
@@ -67,7 +67,7 @@ public class AnimalsData {
                     ,"Leucopsar"
                     ,"Leucopsar rothschildi"
                     ,"Kritis (Critical)"
-                    ,"https://sgp1.digitaloceanspaces.com/tz-mag-id/wp-content/uploads/2019/04/070704040101/Pulau-Komodo-770x392.jpg"
+                    ,"https://iwandahnial.files.wordpress.com/2010/07/bali-2.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
 
             }
@@ -83,8 +83,9 @@ public class AnimalsData {
              * 9 family
              * 10 genus
              * 11 spesies
-             * 12 urlHabitat
-             * 13 urlStatus
+             * 12status
+             * 13 urlHabitat
+             * 14 urlStatus
              *
             */
     };

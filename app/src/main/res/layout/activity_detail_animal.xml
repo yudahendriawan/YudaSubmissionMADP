@@ -346,6 +346,7 @@
                             card_view:cardCornerRadius="25dp">
 
                             <ImageView
+                                android:padding="2dp"
                                 android:id="@+id/img_status"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"

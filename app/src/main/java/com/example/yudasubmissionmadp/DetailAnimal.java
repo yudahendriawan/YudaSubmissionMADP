@@ -20,12 +20,12 @@ public class DetailAnimal extends AppCompatActivity {
     TextView name,scientificName,habitat,kingdom,filum,kelas,ordo,family,genus,spesies,statusKonservasi;
     ImageView imgStatus,imgHabitat;
     JustifiedTextView deskripsi;
-    private String titleToolbar = "Detail Hewan";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_animal);
-        getSupportActionBar().setTitle(titleToolbar);
+        getSupportActionBar().setTitle(Key.DETAIL_ANIMAL);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -94,6 +94,14 @@ public class DetailAnimal extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ViewImage.class);
                 intent.putExtra(Key.INTENT_DATA, animal);
+                startActivity(intent);
+            }
+        });
+
+        imgStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ViewStatusConservation.class);
                 startActivity(intent);
             }
         });
