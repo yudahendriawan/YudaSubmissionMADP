@@ -7,7 +7,6 @@ public class Animal implements Parcelable {
 
     private String name;
     private String habitat;
-    private String scientificName;
     private String description;
     private String photo;
     private String kingdom;
@@ -20,10 +19,6 @@ public class Animal implements Parcelable {
     private String status;
     private String urlHabitat;
     private String urlStatus;
-
-
-
-
 
     public Animal() {
     }
@@ -50,14 +45,6 @@ public class Animal implements Parcelable {
 
     public void setHabitat(String habitat) {
         this.habitat = habitat;
-    }
-
-    public String getScientificName() {
-        return scientificName;
-    }
-
-    public void setScientificName(String scientificName) {
-        this.scientificName = scientificName;
     }
 
     public String getDescription() {
@@ -148,12 +135,6 @@ public class Animal implements Parcelable {
         this.urlStatus = urlStatus;
     }
 
-    /*public static Creator<Animal> getCREATOR() {
-        return CREATOR;
-    }*/
-
-
-
     public static final Creator<Animal> CREATOR = new Creator<Animal>() {
         @Override
         public Animal createFromParcel(Parcel in) {
@@ -173,7 +154,6 @@ public class Animal implements Parcelable {
 
     protected Animal(Parcel in) {
         name = in.readString();
-        scientificName = in.readString();
         habitat = in.readString();
         description = in.readString();
         photo = in.readString();
@@ -192,7 +172,6 @@ public class Animal implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
-        dest.writeString(scientificName);
         dest.writeString(habitat);
         dest.writeString(description);
         dest.writeString(photo);

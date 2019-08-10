@@ -1,4 +1,4 @@
-package com.example.yudasubmissionmadp;
+package com.example.yudasubmissionmadp.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.yudasubmissionmadp.R;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
 

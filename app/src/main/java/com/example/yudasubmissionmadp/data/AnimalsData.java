@@ -70,6 +70,23 @@ public class AnimalsData {
                     ,"https://iwandahnial.files.wordpress.com/2010/07/bali-2.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
 
+            },
+            {"Orang utan"
+                    ,"Borneo dan Sumatera"
+                    ,"Ancaman terhadap orangutan adalah perubahan fungsi hutan menjadi ladang atau perkebunan besar, pertambangan dan diambil kayunya. Hutan menjadi semakin sempit dan rusak. Ketersediaan makanan menjadi berkurang akibatnya banyak orangutan terpaksa memasuki ladang, kebun masyarakat bahkan perkebunan kelapa sawit untuk mencari makanan. Manusia kemudian menganggap orangutan sebagai hama. Padahal manusialah yang mengambil tempat tinggal orangutan. \n" +
+                    "\n" +
+                    "Di samping itu orangutan juga terancam perburuan. Orangutan ditangkap untuk dijadikan binatang peliharaan. Memelihara orangutan sebagai binatang peliharaan di rumah bukanlah tindakan yang tepat. Karena orangutan dan manusia memiliki kesamaan DNA hingga 97% yang menyebabkannya mudah untuk saling menyebarkan penyakit. "
+                    ,"https://upload.wikimedia.org/wikipedia/commons/0/0b/Orangutan.jpg"
+                    ,"Animalia"
+                    ,"Chordata"
+                    ,"Mamalia"
+                    ,"Primata"
+                    ,"Hominidae"
+                    ,"Pongo"
+                    ,"Simia pygmaeus"
+                    ,"Kritis (Critical)"
+                    ,"https://media.beritagar.id/2018-09/1025x938_56159f25baa872fe6c36b98a7b4ccd190d802359.png"
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
             }
             /**
              * 1 Nama,
@@ -94,9 +111,10 @@ public class AnimalsData {
 
         ArrayList<Animal> list = new ArrayList<>();
         for (String[] animalData : data) {
+
             Animal animal = new Animal();
+
             animal.setName(animalData[0]);
-           // animal.setScientificName(animalData[1]);
             animal.setHabitat(animalData[1]);
             animal.setDescription(animalData[2]);
             animal.setPhoto(animalData[3]);

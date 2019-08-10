@@ -2,13 +2,13 @@ package com.example.yudasubmissionmadp.utils;
 
 public class Key {
 
+    //INTENT
     public static final String INTENT_DATA = "intentData";
     public static final String INTENT_IMAGE = "intentImage";
 
     //URL
     public static final String URL_IMAGE_VU = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Status_iucn_VU_icon.svg/1024px-Status_iucn_VU_icon.svg.png";
     public static final String URL_IMAGE_CR = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png";
-
 
     //Toolbar Title
     public static final String TITLE_MAIN = "Hewan Dilindungi";

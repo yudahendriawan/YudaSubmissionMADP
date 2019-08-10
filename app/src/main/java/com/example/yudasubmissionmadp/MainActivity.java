@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.example.yudasubmissionmadp.Activity.AboutMe;
 import com.example.yudasubmissionmadp.data.AnimalsData;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
@@ -52,29 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Membaca file menu dan menambahkan isinya ke action bar jika ada.
-//        getMenuInflater().inflate(R.menu.menu, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        setMode(item.getItemId());
-//        return true;
-//    }
-//
-//
-//    public void setMode(int selectedMode) {
-//        switch (selectedMode) {
-//            case R.id.about:
-//                Intent intent = new Intent(this, AboutMe.class);
-//                startActivity(intent);
-//                break;
-//        }
-//    }
-
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
@@ -95,11 +72,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.exit:
                 exit();
         }
-
-//        if(selectedMode == R.id.about){
-//                Intent intent = new Intent(this, AboutMe.class);
-//                startActivity(intent);
-//        }
     }
 
     public void exit() {

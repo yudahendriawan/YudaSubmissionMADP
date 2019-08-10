@@ -1,10 +1,11 @@
-package com.example.yudasubmissionmadp;
+package com.example.yudasubmissionmadp.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.example.yudasubmissionmadp.R;
 
 
 public class AboutMe extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class AboutMe extends AppCompatActivity {
         //to hide bar system android
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
       //  photo = findViewById(R.id.photo_me);
         getSupportActionBar().hide();
     }

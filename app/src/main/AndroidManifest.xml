@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewStatusConservation" />
-        <activity android:name=".ViewImage" />
+        <activity android:name=".Activity.ViewStatusConservation" />
+        <activity android:name=".Activity.ViewImage" />
         <activity
-            android:name=".AboutMe"
+            android:name=".Activity.AboutMe"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".DetailAnimal"
+            android:name=".Activity.DetailAnimal"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.yudasubmissionmadp.Activity.DetailAnimal;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
 
@@ -31,7 +32,8 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
     @NonNull
     @Override
     public ListAnimalViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_cardview_animal_almost_extinct,viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.item_cardview_animal_almost_extinct,viewGroup,false);
         return new ListAnimalViewHolder(view);
     }
 

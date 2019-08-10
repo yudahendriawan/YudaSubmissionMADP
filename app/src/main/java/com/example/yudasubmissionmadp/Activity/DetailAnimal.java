@@ -1,4 +1,4 @@
-package com.example.yudasubmissionmadp;
+package com.example.yudasubmissionmadp.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,14 +10,18 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.yudasubmissionmadp.Activity.ViewImage;
+import com.example.yudasubmissionmadp.Activity.ViewStatusConservation;
+import com.example.yudasubmissionmadp.R;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
 import com.uncopt.android.widget.text.justify.JustifiedTextView;
 
 public class DetailAnimal extends AppCompatActivity {
+
     Animal animal;
     ImageView imgPhoto;
-    TextView name,scientificName,habitat,kingdom,filum,kelas,ordo,family,genus,spesies,statusKonservasi;
+    TextView name,habitat,kingdom,filum,kelas,ordo,family,genus,spesies,statusKonservasi;
     ImageView imgStatus,imgHabitat;
     JustifiedTextView deskripsi;
 
@@ -33,7 +37,6 @@ public class DetailAnimal extends AppCompatActivity {
 
         deskripsi = findViewById(R.id.tv_description);
         name = findViewById(R.id.tv_item_name);
-      //  scientificName = findViewById(R.id.tv_item_scientificname);
         habitat = findViewById(R.id.tv_habitat);
         imgPhoto = findViewById(R.id.img_item_photo);
         kingdom = findViewById(R.id.tv_kingdom);
@@ -45,16 +48,13 @@ public class DetailAnimal extends AppCompatActivity {
         spesies = findViewById(R.id.tv_spesies);
         imgStatus = findViewById(R.id.img_status);
         imgHabitat = findViewById(R.id.img_habitat);
-
         statusKonservasi = findViewById(R.id.tv_status);
 
         animal = getIntent().getExtras().getParcelable(Key.INTENT_DATA);
 
         name.setText(animal.getName());
         deskripsi.setText(animal.getDescription());
-       // scientificName.setText(animal.getScientificName());
         habitat.setText(animal.getHabitat());
-
         kingdom.setText(animal.getKingdom());
         filum.setText(animal.getFilum());
         kelas.setText(animal.getKelas());
@@ -62,7 +62,6 @@ public class DetailAnimal extends AppCompatActivity {
         family.setText(animal.getFamily());
         genus.setText(animal.getGenus());
         spesies.setText(animal.getSpesies());
-
         statusKonservasi.setText(animal.getStatus());
 
         Glide.with(this)
@@ -105,10 +104,5 @@ public class DetailAnimal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
-//    public void onBackPressed(){
-//
-//    }
-
 }
