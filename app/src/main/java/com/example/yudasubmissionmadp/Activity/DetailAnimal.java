@@ -1,6 +1,7 @@
 package com.example.yudasubmissionmadp.Activity;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.yudasubmissionmadp.Activity.ViewImage;
 import com.example.yudasubmissionmadp.Activity.ViewStatusConservation;
+import com.example.yudasubmissionmadp.MainActivity;
 import com.example.yudasubmissionmadp.R;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
@@ -97,12 +99,19 @@ public class DetailAnimal extends AppCompatActivity {
             }
         });
 
+      //  imgStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.color_white));
         imgStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               // imgStatus.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.color_light_grey));
                 Intent intent = new Intent(v.getContext(), ViewStatusConservation.class);
                 startActivity(intent);
             }
         });
+    }
+
+    public void onBackPressed(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

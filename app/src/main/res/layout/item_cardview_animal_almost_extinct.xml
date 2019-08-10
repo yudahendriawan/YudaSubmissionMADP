@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
+    android:clickable="true"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_marginLeft="8dp"
@@ -15,14 +16,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="80dp"
         android:padding="8dp">
         <ImageView
             android:id="@+id/img_item_photo"
-            android:layout_width="150dp"
-            android:layout_height="220dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_marginBottom="4dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             tools:src="@color/colorPrimaryLight"/>
 
         <TextView
@@ -32,7 +33,7 @@
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginTop="5dp"
             android:layout_marginRight="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="8dp"
+
             android:layout_toEndOf="@+id/img_item_photo"
             android:layout_toRightOf="@+id/img_item_photo"
             android:textSize="16sp"
@@ -74,19 +75,19 @@
             android:layout_toEndOf="@id/img_item_photo"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_detail"
-                android:background="@drawable/bg_button_white"
-                android:textColor="@color/colorPrimaryLight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:text="@string/detail"
-                android:layout_marginTop="10dp"
-                android:textSize="14sp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="@dimen/activity_vertical_margin"/>
+            <!--<Button-->
+                <!--android:id="@+id/btn_detail"-->
+                <!--android:background="@drawable/bg_button_white"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_marginStart="5dp"-->
+                <!--android:text="@string/detail"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:textSize="14sp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginEnd="@dimen/activity_vertical_margin"/>-->
 
         </LinearLayout>
     </RelativeLayout>

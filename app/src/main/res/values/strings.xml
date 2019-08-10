@@ -21,4 +21,5 @@
     <string name="vulnerable">Rentan (Vulnerable, VN)</string>
     <string name="critical_definition">Critically Endangered (CR; Kritis) adalah status konservasi yang diberikan kepada spesies yang menghadapi risiko kepunahan di waktu dekat. Dalam IUCN Redlist tercatat 1.742 hewan dan 1.577 tumbuhan yang berstatus Kritis. Contoh satwa Indonesia yang berstatus kritis antara lain; Harimau Sumatra, Badak Jawa, Badak Sumatera, Jalak Bali, Orangutan Sumatera, Elang Jawa, Trulek Jawa, Rusa Bawean.</string>
     <string name="crititcal">Kritis (Critical, CR)</string>
+    <string name="exit_warning">Apakah anda ingin keluar?</string>
 </resources>

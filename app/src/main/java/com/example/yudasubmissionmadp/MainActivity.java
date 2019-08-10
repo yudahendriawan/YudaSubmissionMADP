@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         // set dialog message
         alertDialogBuilder
-                .setMessage("Apakah anda ingin keluar?")
+                .setMessage(getString(R.string.exit_warning))
                 .setCancelable(false)
                 .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {

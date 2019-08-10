@@ -3,8 +3,10 @@ package com.example.yudasubmissionmadp;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -33,7 +35,7 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
     @Override
     public ListAnimalViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.item_cardview_animal_almost_extinct,viewGroup,false);
+                .inflate(R.layout.item_cardview_animal_almost_extinct, viewGroup, false);
         return new ListAnimalViewHolder(view);
     }
 
@@ -63,36 +65,58 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
 
     public class ListAnimalViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
-        TextView name,habitat;
-        Button detail;
+        TextView name, habitat;
+        //int click = 1;
+        // Button detail;
 
         public ListAnimalViewHolder(@NonNull View itemView) {
             super(itemView);
+            // itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.color_white));
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             name = itemView.findViewById(R.id.tv_item_name);
             habitat = itemView.findViewById(R.id.tv_item_habitat);
-            detail = itemView.findViewById(R.id.btn_detail);
+            // detail = itemView.findViewById(R.id.btn_detail);
         }
 
-        public void binding(final Animal animal){
+        public void binding(final Animal animal) {
 
             name.setText(animal.getName());
             habitat.setText(animal.getHabitat());
 
             Glide.with(itemView.getContext())
                     .load(animal.getPhoto())
-                    .apply(new RequestOptions().override(1000,1000))
+                    .apply(new RequestOptions().override(500, 500))
                     .into(imgPhoto);
 
-            detail.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // if(click==1) {
+                    itemView.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.color_light_grey));
+                    //   click=0;
+                    //}
                     Intent intent = new Intent(v.getContext(), DetailAnimal.class);
                     intent.putExtra(Key.INTENT_DATA, animal);
                     v.getContext().startActivity(intent);
 
                 }
             });
+
+//            itemView.setOnTouchListener(new View.OnTouchListener() {
+//                @Override
+//                public boolean onTouch(View v, MotionEvent event) {
+//                    switch (event.getAction()) {
+//                        case MotionEvent.ACTION_DOWN:
+//                            itemView.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.color_light_grey));
+//                            break;
+//                        case MotionEvent.ACTION_UP:
+//                            itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.color_white));
+//                            break;
+//                    }
+//                    return true;
+//                }
+//            });
+
 
         }
     }

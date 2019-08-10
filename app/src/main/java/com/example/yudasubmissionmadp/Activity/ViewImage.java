@@ -46,13 +46,13 @@ public class ViewImage extends AppCompatActivity {
         if(animalHabitat!=null) {
             Glide.with(this)
                     .load(animalHabitat.getUrlHabitat())
-                    .apply(new RequestOptions().override(1000, 1000))
+                    .apply(new RequestOptions().override(500, 500))
                     .into(imgViewItem);
         }
         else{
             Glide.with(this)
                 .load(animal.getPhoto())
-                .apply(new RequestOptions().override(1000,1000))
+                .apply(new RequestOptions().override(500,500))
                 .into(imgViewItem);
         }
 
