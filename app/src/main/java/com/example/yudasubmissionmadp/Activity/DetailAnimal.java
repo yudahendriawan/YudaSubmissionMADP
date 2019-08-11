@@ -1,16 +1,23 @@
 package com.example.yudasubmissionmadp.Activity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.Target;
 import com.example.yudasubmissionmadp.Activity.ViewImage;
 import com.example.yudasubmissionmadp.Activity.ViewStatusConservation;
 import com.example.yudasubmissionmadp.MainActivity;
@@ -26,11 +33,14 @@ public class DetailAnimal extends AppCompatActivity {
     TextView name,habitat,kingdom,filum,kelas,ordo,family,genus,spesies,statusKonservasi;
     ImageView imgStatus,imgHabitat;
     JustifiedTextView deskripsi;
+    ProgressBar pbImg, pbImgHabitat, pbImageStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_animal);
+
+
         getSupportActionBar().setTitle(Key.DETAIL_ANIMAL);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -51,6 +61,9 @@ public class DetailAnimal extends AppCompatActivity {
         imgStatus = findViewById(R.id.img_status);
         imgHabitat = findViewById(R.id.img_habitat);
         statusKonservasi = findViewById(R.id.tv_status);
+        pbImg = findViewById(R.id.progress_bar_img);
+        pbImgHabitat = findViewById(R.id.progress_bar_img_habitat);
+        pbImageStatus = findViewById(R.id.progress_bar_img_status);
 
         animal = getIntent().getExtras().getParcelable(Key.INTENT_DATA);
 
@@ -69,16 +82,55 @@ public class DetailAnimal extends AppCompatActivity {
         Glide.with(this)
                 .load(animal.getPhoto())
                 .apply(new RequestOptions().override(1000,1000))
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        pbImg.setVisibility(View.GONE);
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        pbImg.setVisibility(View.GONE);
+                        return false;
+                    }
+                })
                 .into(imgPhoto);
 
         Glide.with(this)
                 .load(animal.getUrlStatus())
                 .apply(new RequestOptions().override(500,500))
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        pbImageStatus.setVisibility(View.GONE);
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        pbImageStatus.setVisibility(View.GONE);
+                        return false;
+                    }
+                })
                 .into(imgStatus);
 
         Glide.with(this)
                 .load(animal.getUrlHabitat())
                 .apply(new RequestOptions().override(500,500))
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        pbImgHabitat.setVisibility(View.GONE);
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        pbImgHabitat.setVisibility(View.GONE);
+                        return false;
+                    }
+                })
                 .into(imgHabitat);
 
         imgHabitat.setOnClickListener(new View.OnClickListener() {
