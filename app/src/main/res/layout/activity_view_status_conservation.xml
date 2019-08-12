@@ -24,11 +24,22 @@
                 android:justificationMode="inter_word"
                 android:text="@string/definition_conservation" />
 
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_light_grey"
+                android:layout_below="@id/jtv_definition"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                />
+
             <ImageView
                 android:id="@+id/img_view_vulnerable"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_below="@id/jtv_definition"
+                android:layout_below="@id/view_1"
                 android:layout_marginStart="@dimen/activity_vertical_margin"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_marginEnd="@dimen/activity_vertical_margin"
@@ -38,7 +49,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/jtv_definition"
+                android:layout_below="@id/view_1"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:layout_toEndOf="@id/img_view_vulnerable"
                 android:gravity="center_vertical"
@@ -56,11 +67,22 @@
                 android:layout_marginBottom="10dp"
                 android:text="@string/vulnerable_definition"/>
 
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_light_grey"
+                android:layout_below="@id/vulnerable_definition"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                />
+
             <ImageView
                 android:id="@+id/img_view_critical"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_below="@id/vulnerable_definition"
+                android:layout_below="@id/view_2"
                 android:layout_marginStart="@dimen/activity_vertical_margin"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/activity_vertical_margin"
@@ -71,7 +93,7 @@
                 android:id="@+id/tv_critical"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/vulnerable_definition"
+                android:layout_below="@id/view_2"
                 android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/img_view_vulnerable"
                 android:gravity="center_vertical"
@@ -88,6 +110,50 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/critical_definition"/>
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_light_grey"
+                android:layout_below="@id/critical_definition"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                />
+
+            <ImageView
+                android:id="@+id/img_view_endangered"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/view_3"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="10dp"
+                tools:background="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tv_endangered"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/view_3"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/img_view_vulnerable"
+                android:gravity="center_vertical"
+                android:text="Terancam, Endangered"
+                android:textStyle="bold" />
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/endangered_definition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_below="@+id/img_view_endangered"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/endangered_definition"/>
 
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>

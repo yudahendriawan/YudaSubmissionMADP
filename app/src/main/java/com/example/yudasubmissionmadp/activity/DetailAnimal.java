@@ -40,7 +40,7 @@ public class DetailAnimal extends AppCompatActivity {
 
 
         getSupportActionBar().setTitle(Key.DETAIL_ANIMAL);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);

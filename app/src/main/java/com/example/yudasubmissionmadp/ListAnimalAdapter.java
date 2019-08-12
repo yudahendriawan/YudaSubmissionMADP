@@ -74,17 +74,13 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
         CircleImageView imgPhoto;
         TextView name, habitat;
         ProgressBar progressBar;
-        //int click = 1;
-        // Button detail;
 
         public ListAnimalViewHolder(@NonNull View itemView) {
             super(itemView);
-            // itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.color_white));
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             name = itemView.findViewById(R.id.tv_item_name);
             habitat = itemView.findViewById(R.id.tv_item_habitat);
             progressBar = itemView.findViewById(R.id.progress_bar_img);
-            // detail = itemView.findViewById(R.id.btn_detail);
         }
 
         public void binding(final Animal animal) {
@@ -113,10 +109,9 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // if(click==1) {
+
                     itemView.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.blue_sky));
-                    //   click=0;
-                    //}
+
                     Intent intent = new Intent(v.getContext(), DetailAnimal.class);
                     intent.putExtra(Key.INTENT_DATA, animal);
                     v.getContext().startActivity(intent);
@@ -124,23 +119,6 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
 
                 }
             });
-
-//            itemView.setOnTouchListener(new View.OnTouchListener() {
-//                @Override
-//                public boolean onTouch(View v, MotionEvent event) {
-//                    switch (event.getAction()) {
-//                        case MotionEvent.ACTION_DOWN:
-//                            itemView.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.color_light_grey));
-//                            break;
-//                        case MotionEvent.ACTION_UP:
-//                            itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.color_white));
-//                            break;
-//                    }
-//                    return true;
-//                }
-//            });
-
-
         }
     }
 }

@@ -18,8 +18,7 @@
             android:name=".activity.AboutMe"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".activity.DetailAnimal"
-            android:parentActivityName=".MainActivity" />
+            android:name=".activity.DetailAnimal" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

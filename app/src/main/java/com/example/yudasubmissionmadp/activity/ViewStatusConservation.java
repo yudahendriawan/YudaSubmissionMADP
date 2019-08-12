@@ -11,7 +11,7 @@ import com.example.yudasubmissionmadp.utils.Key;
 
 public class ViewStatusConservation extends AppCompatActivity {
 
-    ImageView imageViewVN, imageViewCR;
+    ImageView imageViewVN, imageViewCR, imgViewEN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class ViewStatusConservation extends AppCompatActivity {
 
         imageViewVN = findViewById(R.id.img_view_vulnerable);
         imageViewCR = findViewById(R.id.img_view_critical);
+        imgViewEN = findViewById(R.id.img_view_endangered);
 
         Glide.with(this)
                 .load(Key.URL_IMAGE_VU)
@@ -31,6 +32,11 @@ public class ViewStatusConservation extends AppCompatActivity {
                 .load(Key.URL_IMAGE_CR)
                 .apply(new RequestOptions().override(500,500))
                 .into(imageViewCR);
+
+        Glide.with(this)
+                .load(Key.URL_IMAGE_EN)
+                .apply(new RequestOptions().override(500,500))
+                .into(imgViewEN);
     }
 
 }
