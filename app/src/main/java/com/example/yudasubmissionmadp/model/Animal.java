@@ -19,6 +19,7 @@ public class Animal implements Parcelable {
     private String status;
     private String urlHabitat;
     private String urlStatus;
+    private String total;
 
     public Animal() {
     }
@@ -135,6 +136,14 @@ public class Animal implements Parcelable {
         this.urlStatus = urlStatus;
     }
 
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
     public static final Creator<Animal> CREATOR = new Creator<Animal>() {
         @Override
         public Animal createFromParcel(Parcel in) {
@@ -167,6 +176,7 @@ public class Animal implements Parcelable {
         status = in.readString();
         urlHabitat = in.readString();
         urlStatus = in.readString();
+        total = in.readString();
     }
 
     @Override
@@ -185,5 +195,6 @@ public class Animal implements Parcelable {
         dest.writeString(status);
         dest.writeString(urlHabitat);
         dest.writeString(urlStatus);
+        dest.writeString(total);
     }
 }

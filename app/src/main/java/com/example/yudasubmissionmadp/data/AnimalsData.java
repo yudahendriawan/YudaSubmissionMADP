@@ -21,6 +21,7 @@ public class AnimalsData {
                     ,"Kritis (Critical)"
                     ,"http://3.bp.blogspot.com/-gThIohoIsAE/UHZQBpwNalI/AAAAAAAACRw/GXkDNllPk6s/s640/Ujung-Kulon-National-Park-map-1600.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
+                    ,"67 Ekor"
             },
             {"Harimau Sumatera"
                     ,"Pulau Sumatera"
@@ -35,7 +36,9 @@ public class AnimalsData {
                     ,"Phantera tigris"
                     ,"Kritis (Critical)"
                     ,"https://nationdeveloper.files.wordpress.com/2011/05/sumatera.png"
-                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"},
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
+                    ,"603 Ekor"
+            },
             {"Komodo"
                     ,"Pulau Komodo"
                     ,"Komodo, atau juga disebut biawak komodo (Varanus komodoensis), adalah spesies biawak besar yang terdapat di Pulau Komodo, Rinca, Flores, Gili Motang, dan Gili Dasami di Provinsi Nusa Tenggara Timur, Indonesia. Biawak ini oleh penduduk asli pulau Komodo juga disebut dengan nama setempat ora.\n" +
@@ -54,6 +57,7 @@ public class AnimalsData {
                     ,"Rentan (Vulnerable)"
                     ,"http://www.pulaukomodo.com/uploaded/content/Taman-Nasional-Komodo.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Status_iucn_VU_icon.svg/1024px-Status_iucn_VU_icon.svg.png"
+                    ,"2.897 Ekor"
             },
             {"Jalak Bali"
                     ,"Pulau Bali"
@@ -69,6 +73,7 @@ public class AnimalsData {
                     ,"Kritis (Critical)"
                     ,"https://iwandahnial.files.wordpress.com/2010/07/bali-2.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
+                    ,"500 Ekor"
 
             },
             {"Orang utan"
@@ -87,6 +92,7 @@ public class AnimalsData {
                     ,"Kritis (Critical)"
                     ,"https://media.beritagar.id/2018-09/1025x938_56159f25baa872fe6c36b98a7b4ccd190d802359.png"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Status_iucn_CR_icon.svg/1024px-Status_iucn_CR_icon.svg.png"
+                    ,"13.700 Ekor"
             },
             {"Tarsius tarsier"
                     ,"Hutan-hutan Sulawesi"
@@ -108,6 +114,7 @@ public class AnimalsData {
                     ,"Rentan, Vulnerable"
                     ,"https://www.researchgate.net/profile/Myron_Shekelle/publication/267156249/figure/fig3/AS:392095614423050@1470494287976/Map-of-Eastern-Tarsier-type-localities-with-the-names-as-they-appeared-in-the-original.png"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Status_iucn_VU_icon.svg/1024px-Status_iucn_VU_icon.svg.png"
+                    ,"- Ekor"
             },
             {"Anoa"
                     ,"Pulau Sulawesi"
@@ -125,6 +132,7 @@ public class AnimalsData {
                     ,"Rentan, Vulnerable"
                     ,"http://4.bp.blogspot.com/-xerlWDcAnb0/UI9cl3-ePJI/AAAAAAAAAI4/IvUGrukR-wk/s1600/1.JPG"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Status_iucn_VU_icon.svg/1024px-Status_iucn_VU_icon.svg.png"
+                    ,"2.500 Ekor"
             },
             {"Maleo"
                     ,"Pulau Sulawesi"
@@ -142,6 +150,7 @@ public class AnimalsData {
                     ,"Terancam, Endangered"
                     ,"https://photos.mongabay.com/10/1207Locator-Map.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Status_iucn_EN_icon.svg/768px-Status_iucn_EN_icon.svg.png"
+                    ,"10.000 Ekor"
             },
             {"Bekantan"
                     ,"Pulau Kalimantan"
@@ -167,6 +176,7 @@ public class AnimalsData {
                     ,"Terancam, Endangered"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Nasalis_larvatus_range_map.png/250px-Nasalis_larvatus_range_map.png"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Status_iucn_EN_icon.svg/768px-Status_iucn_EN_icon.svg.png"
+                    ,"25.000 Ekor"
             },
             {"Elang jawa"
                     ,"Pulau Jawa"
@@ -192,6 +202,7 @@ public class AnimalsData {
                     ,"Terancam, Endangered"
                     ,"https://docplayer.info/docs-images/61/46247204/images/16-0.png"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Status_iucn_EN_icon.svg/768px-Status_iucn_EN_icon.svg.png"
+                    ,"300-500 Ekor"
             },
             {"Gajah Sumatra"
                     ,"Pulau Sumatra"
@@ -209,6 +220,7 @@ public class AnimalsData {
                     ,"Rentan, Vulnerable"
                     ,"https://www.researchgate.net/profile/Lilik_Prasetyo/publication/320977620/figure/fig6/AS:668471633399816@1536387465185/Gambar-39-Peta-keberadaan-gajah-dan-harimau-sumatera-Prasetyo-et-al-2016.jpg"
                     ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Status_iucn_VU_icon.svg/1024px-Status_iucn_VU_icon.svg.png"
+                    ,"2.400-2.800 Ekor"
             }
             /**
              * 1 Nama,
@@ -250,6 +262,7 @@ public class AnimalsData {
             animal.setStatus(animalData[11]);
             animal.setUrlHabitat(animalData[12]);
             animal.setUrlStatus(animalData[13]);
+            animal.setTotal(animalData[14]);
 
             list.add(animal);
         }

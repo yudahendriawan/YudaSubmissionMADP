@@ -28,10 +28,10 @@ public class DetailAnimal extends AppCompatActivity {
 
     Animal animal;
     ImageView imgPhoto;
-    TextView name, habitat, kingdom, filum, kelas, ordo, family, genus, spesies, statusKonservasi;
-    ImageView imgStatus, imgHabitat;
+    TextView name, habitat, kingdom, filum, kelas, ordo, family, genus, spesies, statusKonservasi, tvPm;
+    ImageView imgStatus, imgHabitat, imgPm;
     JustifiedTextView deskripsi;
-    ProgressBar pbImg, pbImgHabitat, pbImageStatus;
+    ProgressBar pbImg, pbImgHabitat, pbImageStatus, pbImgPm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class DetailAnimal extends AppCompatActivity {
 
         deskripsi = findViewById(R.id.tv_description);
         name = findViewById(R.id.tv_item_name);
-        habitat = findViewById(R.id.tv_habitat);
+
         imgPhoto = findViewById(R.id.img_item_photo);
         kingdom = findViewById(R.id.tv_kingdom);
         filum = findViewById(R.id.tv_filum);
@@ -56,12 +56,22 @@ public class DetailAnimal extends AppCompatActivity {
         family = findViewById(R.id.tv_family);
         genus = findViewById(R.id.tv_genus);
         spesies = findViewById(R.id.tv_spesies);
-        imgStatus = findViewById(R.id.img_status);
-        imgHabitat = findViewById(R.id.img_habitat);
-        statusKonservasi = findViewById(R.id.tv_status);
         pbImg = findViewById(R.id.progress_bar_img);
+
+        //habitat
+        imgHabitat = findViewById(R.id.img_habitat);
         pbImgHabitat = findViewById(R.id.progress_bar_img_habitat);
+        habitat = findViewById(R.id.tv_habitat);
+
+        //status
+        imgStatus = findViewById(R.id.img_status);
         pbImageStatus = findViewById(R.id.progress_bar_img_status);
+        statusKonservasi = findViewById(R.id.tv_status);
+
+        //Plus Minus
+        pbImgPm = findViewById(R.id.progress_bar_img_pm);
+        imgPm = findViewById(R.id.img_pm);
+        tvPm = findViewById(R.id.tv_pm);
 
         animal = getIntent().getExtras().getParcelable(Key.INTENT_DATA);
 
@@ -76,6 +86,7 @@ public class DetailAnimal extends AppCompatActivity {
         genus.setText(animal.getGenus());
         spesies.setText(animal.getSpesies());
         statusKonservasi.setText(animal.getStatus());
+        tvPm.setText(animal.getTotal());
 
         Glide.with(this)
                 .load(animal.getPhoto())
@@ -130,6 +141,24 @@ public class DetailAnimal extends AppCompatActivity {
                     }
                 })
                 .into(imgHabitat);
+
+        Glide.with(this)
+                .load(Key.URL_IMAGE_PM)
+                .apply(new RequestOptions().override(500, 500))
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        pbImgPm.setVisibility(View.GONE);
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        pbImgPm.setVisibility(View.GONE);
+                        return false;
+                    }
+                })
+                .into(imgPm);
 
         imgHabitat.setOnClickListener(new View.OnClickListener() {
             @Override

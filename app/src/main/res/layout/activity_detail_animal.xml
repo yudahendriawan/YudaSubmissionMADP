@@ -314,7 +314,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.3"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -325,7 +325,7 @@
                             android:layout_height="50dp"
                             android:layout_marginStart="@dimen/activity_vertical_margin"
                             android:layout_marginEnd="@dimen/activity_vertical_margin"
-                            card_view:cardCornerRadius="4dp">
+                            card_view:cardCornerRadius="25dp">
 
                             <ProgressBar
                                 android:id="@+id/progress_bar_img_habitat"
@@ -337,6 +337,7 @@
 
 
                             <ImageView
+                                android:padding="2dp"
                                 android:id="@+id/img_habitat"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -357,7 +358,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.3"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -390,9 +391,54 @@
                         <TextView
                             android:id="@+id/tv_status"
                             android:paddingTop="7dp"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             tools:text="Kritis"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="50dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="@dimen/activity_vertical_margin"
+                            android:layout_marginEnd="@dimen/activity_vertical_margin"
+                            card_view:cardCornerRadius="25dp">
+
+                            <ProgressBar
+                                android:id="@+id/progress_bar_img_pm"
+                                android:layout_width="40dp"
+                                android:layout_gravity="center"
+                                android:progressBackgroundTint="@color/colorPrimaryLight"
+                                android:layout_height="40dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:padding="2dp"
+                                android:scaleType="fitCenter"
+                                android:id="@+id/img_pm"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_white"/>
+
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/tv_pm"
+                            android:paddingTop="7dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="1000 Ekor"
                             android:gravity="center"/>
 
                     </LinearLayout>
