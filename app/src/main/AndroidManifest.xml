@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.ViewStatusConservation" />
-        <activity android:name=".Activity.ViewImage" />
+        <activity android:name=".activity.ViewStatusConservation" />
+        <activity android:name=".activity.ViewImage" />
         <activity
-            android:name=".Activity.AboutMe"
+            android:name=".activity.AboutMe"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".Activity.DetailAnimal"
+            android:name=".activity.DetailAnimal"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

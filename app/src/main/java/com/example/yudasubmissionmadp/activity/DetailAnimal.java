@@ -1,9 +1,8 @@
-package com.example.yudasubmissionmadp.Activity;
+package com.example.yudasubmissionmadp.activity;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -18,8 +18,6 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.example.yudasubmissionmadp.Activity.ViewImage;
-import com.example.yudasubmissionmadp.Activity.ViewStatusConservation;
 import com.example.yudasubmissionmadp.MainActivity;
 import com.example.yudasubmissionmadp.R;
 import com.example.yudasubmissionmadp.model.Animal;
@@ -30,8 +28,8 @@ public class DetailAnimal extends AppCompatActivity {
 
     Animal animal;
     ImageView imgPhoto;
-    TextView name,habitat,kingdom,filum,kelas,ordo,family,genus,spesies,statusKonservasi;
-    ImageView imgStatus,imgHabitat;
+    TextView name, habitat, kingdom, filum, kelas, ordo, family, genus, spesies, statusKonservasi;
+    ImageView imgStatus, imgHabitat;
     JustifiedTextView deskripsi;
     ProgressBar pbImg, pbImgHabitat, pbImageStatus;
 
@@ -81,7 +79,7 @@ public class DetailAnimal extends AppCompatActivity {
 
         Glide.with(this)
                 .load(animal.getPhoto())
-                .apply(new RequestOptions().override(1000,1000))
+                .apply(new RequestOptions().override(1000, 1000))
                 .listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -99,7 +97,7 @@ public class DetailAnimal extends AppCompatActivity {
 
         Glide.with(this)
                 .load(animal.getUrlStatus())
-                .apply(new RequestOptions().override(500,500))
+                .apply(new RequestOptions().override(500, 500))
                 .listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -117,7 +115,7 @@ public class DetailAnimal extends AppCompatActivity {
 
         Glide.with(this)
                 .load(animal.getUrlHabitat())
-                .apply(new RequestOptions().override(500,500))
+                .apply(new RequestOptions().override(500, 500))
                 .listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -151,19 +149,26 @@ public class DetailAnimal extends AppCompatActivity {
             }
         });
 
-      //  imgStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.color_white));
+        //  imgStatus.setBackgroundColor(ContextCompat.getColor(this, R.color.color_white));
         imgStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // imgStatus.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.color_light_grey));
+                // imgStatus.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.color_light_grey));
                 Intent intent = new Intent(v.getContext(), ViewStatusConservation.class);
                 startActivity(intent);
             }
         });
+
     }
 
-    public void onBackPressed(){
+    @Override
+    public void onBackPressed() {
+       // Toast.makeText(this, "Use arrow in the corner to back", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        //biar gak numpuk aplikasinya
+        finish();
     }
+
+
 }

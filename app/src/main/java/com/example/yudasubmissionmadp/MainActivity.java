@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.example.yudasubmissionmadp.Activity.AboutMe;
+import com.example.yudasubmissionmadp.activity.AboutMe;
 import com.example.yudasubmissionmadp.data.AnimalsData;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.about:
                 Intent intent = new Intent(this, AboutMe.class);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.exit:
                 exit();

@@ -1,6 +1,5 @@
-package com.example.yudasubmissionmadp.Activity;
+package com.example.yudasubmissionmadp.activity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -9,8 +8,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.yudasubmissionmadp.R;
 import com.example.yudasubmissionmadp.utils.Key;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ViewStatusConservation extends AppCompatActivity {
 

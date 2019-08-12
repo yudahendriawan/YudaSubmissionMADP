@@ -131,7 +131,7 @@ public class AnimalsData {
                     ,"Macrocephalon maleo"
                     ,"Terancam, Endangered"
                     ,"https://photos.mongabay.com/10/1207Locator-Map.jpg"
-                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/EN_IUCN_3_1.svg/1024px-EN_IUCN_3_1.svg.png"
+                    ,"https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Status_iucn_EN_icon.svg/768px-Status_iucn_EN_icon.svg.png"
             }
             /**
              * 1 Nama,

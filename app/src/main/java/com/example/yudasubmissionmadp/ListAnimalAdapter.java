@@ -8,11 +8,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -22,7 +20,7 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.example.yudasubmissionmadp.Activity.DetailAnimal;
+import com.example.yudasubmissionmadp.activity.DetailAnimal;
 import com.example.yudasubmissionmadp.model.Animal;
 import com.example.yudasubmissionmadp.utils.Key;
 
@@ -122,6 +120,7 @@ public class ListAnimalAdapter extends RecyclerView.Adapter<ListAnimalAdapter.Li
                     Intent intent = new Intent(v.getContext(), DetailAnimal.class);
                     intent.putExtra(Key.INTENT_DATA, animal);
                     v.getContext().startActivity(intent);
+                    ((MainActivity)v.getContext()).finish();
 
                 }
             });
